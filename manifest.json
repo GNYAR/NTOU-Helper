@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "海大小幫手",
+  "description": "更快速、方便的海大生活",
+  "version": "0.0.1",
+  "icons": {
+    "16": "icons/NTOU_16.png",
+    "32": "icons/NTOU_32.png",
+    "48": "icons/NTOU_48.png",
+    "64": "icons/NTOU_64.png",
+    "128": "icons/NTOU_128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ais.ntou.edu.tw/MainFrame.aspx"],
+      "js": [
+        "lib/jquery.js",
+        "contentScripts/utils.js",
+        "contentScripts/script.js"
+      ]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
